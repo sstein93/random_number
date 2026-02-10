@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Random Number</title>
+  <style>
+    body { font-family: system-ui, sans-serif; display: grid; place-items: center; height: 100vh; margin: 0; }
+    .n { font-size: 72px; font-weight: 700; }
+    button { margin-top: 16px; font-size: 18px; padding: 10px 14px; }
+  </style>
+</head>
+<body>
+  <div>
+    <div id="num" class="n">—</div>
+    <button id="reroll">New number</button>
+  </div>
+
+  <script>
+    function roll() {
+      // Change bounds here:
+      const min = 1;
+      const max = 100;
+      const n = Math.floor(Math.random() * (max - min + 1)) + min;
+      document.getElementById("num").textContent = n;
+    }
+    document.getElementById("reroll").addEventListener("click", roll);
+    roll(); // roll on page load
+  </script>
+</body>
+</html>

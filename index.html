@@ -138,12 +138,6 @@
     <div class="card controls">
       <div>
         <h1>Spin the Wheel 🎡</h1>
-        <p>Scan the QR code, tap spin, and let fate decide.</p>
-      </div>
-
-      <div class="row">
-        <div class="pill">Segments: <span id="segCount">12</span></div>
-        <div class="pill">Mode: <span>integers</span></div>
       </div>
 
       <button id="spin" class="btn">SPIN</button>
@@ -166,7 +160,6 @@
     const FIXED_MAX = 300;
     const resultEl = document.getElementById("result");
     const metaEl = document.getElementById("meta");
-    const segCountEl = document.getElementById("segCount");
 
     let angle = 0;              // current wheel rotation in radians
     let isSpinning = false;
@@ -238,7 +231,7 @@
 
       // center cap
       ctx.beginPath();
-      ctx.arc(0,0, 84, 0, Math.PI*2);
+      ctx.arc(0,0, 60, 0, Math.PI*2);
       ctx.fillStyle = "rgba(11,16,32,0.92)";
       ctx.fill();
       ctx.strokeStyle = "rgba(255,255,255,0.35)";
@@ -248,7 +241,6 @@
       ctx.fillStyle = "rgba(238,242,255,0.92)";
       ctx.font = "900 34px ui-sans-serif, system-ui";
       ctx.textAlign = "center";
-      ctx.fillText("SPIN", 0, 12);
 
       ctx.restore();
     }

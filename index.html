@@ -57,7 +57,7 @@
       width:0; height:0;
       border-left: 18px solid transparent;
       border-right: 18px solid transparent;
-      border-bottom: 32px solid #ffffff;
+      border-top: 32px solid #ffffff;
       filter: drop-shadow(0 6px 8px #00000088);
     }
     .pointer::after{
@@ -138,12 +138,6 @@
     <div class="card controls">
       <div>
         <h1>Spin the Wheel 🎡</h1>
-        <p>Scan the QR code, tap spin, and let fate decide.</p>
-      </div>
-
-      <div class="row">
-        <div class="pill">Segments: <span id="segCount">12</span></div>
-        <div class="pill">Mode: <span>integers</span></div>
       </div>
 
       <button id="spin" class="btn">SPIN</button>
@@ -240,7 +234,7 @@
     ctx.fillStyle = "rgba(238,242,255,0.92)";
     ctx.font = "900 34px ui-sans-serif, system-ui";
     ctx.textAlign = "center";
-    ctx.fillText("SPIN", 0, 12);
+    ctx.fillText("", 0, 12);
 
     ctx.restore();
   }

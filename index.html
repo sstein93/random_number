@@ -142,17 +142,6 @@
       </div>
 
       <div class="row">
-        <div style="flex:1">
-          <label for="min">Min</label>
-          <input id="min" type="number" value="1" />
-        </div>
-        <div style="flex:1">
-          <label for="max">Max</label>
-          <input id="max" type="number" value="300" />
-        </div>
-      </div>
-
-      <div class="row">
         <div class="pill">Segments: <span id="segCount">12</span></div>
         <div class="pill">Mode: <span>integers</span></div>
       </div>
@@ -172,8 +161,9 @@
     const canvas = document.getElementById("wheel");
     const ctx = canvas.getContext("2d");
     const spinBtn = document.getElementById("spin");
-    const minEl = document.getElementById("min");
-    const maxEl = document.getElementById("max");
+    // Set your wheel range here
+    const FIXED_MIN = 1;
+    const FIXED_MAX = 300;
     const resultEl = document.getElementById("result");
     const metaEl = document.getElementById("meta");
     const segCountEl = document.getElementById("segCount");

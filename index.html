@@ -235,16 +235,16 @@
         ctx.lineWidth = 3;
         ctx.stroke();
 
-        // text
-        ctx.save();
-        ctx.rotate(start + step/2);
-        ctx.textAlign = "right";
-        ctx.fillStyle = "rgba(10,16,32,0.92)";
-        ctx.font = "900 44px ui-sans-serif, system-ui";
-        ctx.shadowColor = "rgba(255,255,255,0.25)";
-        ctx.shadowBlur = 0;
-        ctx.fillText(String(values[i]), r - 24, 16);
-        ctx.restore();
+        // text (only show if <= 50 segments)
+        if (n <= 50) {
+          ctx.save();
+          ctx.rotate(start + step/2);
+          ctx.textAlign = "right";
+          ctx.fillStyle = "rgba(10,16,32,0.92)";
+          ctx.font = "900 44px ui-sans-serif, system-ui";
+          ctx.fillText(String(values[i]), r - 24, 16);
+          ctx.restore();
+        }
       }
 
       // center cap

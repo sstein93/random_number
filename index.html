@@ -177,11 +177,10 @@
     }
 
     function rangeValues(){
-      let min = clampInt(minEl.value, 1);
-      let max = clampInt(maxEl.value, 12);
-      if (min > max) [min, max] = [max, min];
       const values = [];
-      for (let v=min; v<=max; v++) values.push(v);
+      for (let v = FIXED_MIN; v <= FIXED_MAX; v++) {
+        values.push(v);
+      }
       return values;
     }
 
@@ -333,8 +332,6 @@
     }
 
     spinBtn.addEventListener("click", spin);
-    minEl.addEventListener("input", refresh);
-    maxEl.addEventListener("input", refresh);
 
     // initial draw
     refresh();
